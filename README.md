@@ -1,7 +1,7 @@
 # wav-files-toolkit
 
-All binaries in one archive to work with WAV files
-
+- [x] All binaries in one archive to work with WAV files
+- [ ] Rust-based
 - [ ] Binaries are *statically-linked*
 
 ## Tools
