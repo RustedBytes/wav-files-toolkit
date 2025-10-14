@@ -17,6 +17,10 @@ jobs:
         run: wget -O "/tmp/wav-files-concat" "https://github.com/RustedBytes/wav-files-concat/releases/download/v0.1.0/wav-files-concat"
       - name: Download wav-files-chunker
         run: wget -O "/tmp/wav-files-chunker" "https://github.com/RustedBytes/wav-files-chunker/releases/download/v0.1.0/wav-files-chunker"
+      - name: Download wav-files-validate
+        run: wget -O "/tmp/wav-files-validate" "https://github.com/RustedBytes/wav-files-validate/releases/download/v0.1.0/wav-files-validate"
+      - name: Download wav-files-spectrogram
+        run: wget -O "/tmp/wav-files-spectrogram" "https://github.com/RustedBytes/wav-files-spectrogram/releases/download/v0.1.0/wav-files-spectrogram"
       - name: Make files executable
         run: chmod +x /tmp/wav-files-*
       - name: Strip files
