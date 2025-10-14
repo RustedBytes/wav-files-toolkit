@@ -4,6 +4,8 @@
 - [x] Rust-based, with test suits
 - [ ] Binaries are *statically-linked*
 
+Download the latest archive from [the Releases page](https://github.com/RustedBytes/wav-files-toolkit/releases).
+
 ## Tools
 
 - [x] [wav-files-**convert**](https://github.com/RustedBytes/wav-files-convert): Convert MP3, FLAC, OGG, M4A, AAC, WMA, AIFF, AU, MP2 to WAV
