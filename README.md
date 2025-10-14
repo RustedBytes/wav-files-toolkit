@@ -8,7 +8,7 @@
 
 - [ ] wav-files-**convert**: Convert between WAV and other formats (MP3, FLAC)
 - [ ] wav-files-**augment**: Create modified audio by adding noise, shifting pitch for WAV files
-- [ ] wav-files-**spectrogram**: Generate visual spectrogram images from audio for WAV files
+- [ ] [wav-files-**spectrogram**](https://github.com/RustedBytes/wav-files-spectrogram): Generate visual spectrogram images from audio for WAV files
 - [ ] wav-files-**normalize**: Adjust audio to a target peak or integrated loudness (LUFS) of WAV files
 - [ ] wav-files-**format**: Standardize sample rate, bit depth, and channels of WAV files
 - [x] [wav-files-**validate**](https://github.com/RustedBytes/wav-files-validate): Validate file integrity of WAV files in a folder
