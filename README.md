@@ -15,3 +15,7 @@ All binaries in one archive to work with WAV files
 - wav-files-**ss**: Speech Separation (using WebRTC VAD) for WAV files
 - wav-files-**filter**: Filter audios by their length
 - wav-files-**stats**: Calculate statistics of a folder with WAV files
+
+## Author
+
+Yehor Smoliakov (concat: <egorsmkv@gmail.com>)
