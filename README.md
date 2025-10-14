@@ -18,6 +18,6 @@
 - [x] [wav-files-**filter**](https://github.com/RustedBytes/wav-files-filter): Filter audios by their length
 - [x] [wav-files-**stats**](https://github.com/RustedBytes/wav-files-stats): Calculate statistics of a folder with WAV files
 
-## Author
+## Authors
 
-Yehor Smoliakov (concat: <egorsmkv@gmail.com>)
+- Yehor Smoliakov (contact: <egorsmkv@gmail.com>)
