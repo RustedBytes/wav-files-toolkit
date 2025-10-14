@@ -20,6 +20,10 @@
 
 ### TODO
 
+<details>
+
+  <summary>Good next programs to implement</summary>
+  
 - [ ] wav-files-**denoise**: Apply noise reduction algorithms (e.g., spectral subtraction or Wiener filtering) to remove background noise from WAV files. Why? Complements augmentation (which adds noise) by enabling cleanup; essential for real-world recordings.
 - [ ] wav-files-**eq**: Apply equalization filters to boost/cut specific frequency bands in WAV files. Why? Builds on spectrogram visualization for targeted audio shaping; useful for mastering or voice enhancement.
 - [ ] wav-files-**trim**: Automatically detect and trim silence from the start/end of WAV files, with optional threshold settings. Why? Enhances speech separation and chunking by removing dead air; streamlines podcast or interview processing.
@@ -30,6 +34,8 @@
 - [ ] wav-files-**mix**: Overlay or blend multiple WAV files into a single output, with volume balancing and channel mapping (e.g., stereo mixdown). Why? Extends concatenation for layered audio (e.g., voiceover on music); useful for post-production without full DAWs.
 - [ ] wav-files-**echo**: Add echo, reverb, or chorus effects to WAV files using delay-based DSP parameters (e.g., decay time, wet/dry mix). Why? Enhances augmentation with spatial effects; great for simulating environments in voice recordings.
 - [ ] wav-files-**fft**: Compute and export Fast Fourier Transform (FFT) data as text/CSV for frequency analysis of WAV files. Why? Deeper dive beyond spectrograms for quantitative spectral insights; supports research or automated quality checks.
+
+</details>
 
 ## Authors
 
