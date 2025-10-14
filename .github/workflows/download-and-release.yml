@@ -11,3 +11,11 @@ jobs:
         run: wget -O "/tmp/wav-files-filter" "https://github.com/RustedBytes/wav-files-filter/releases/download/v0.1.0/wav-files-filter"
       - name: Download wav-files-stats
         run: wget -O "/tmp/wav-files-stats" "https://github.com/RustedBytes/wav-files-stats/releases/download/v0.1.0/wav-files-stats"
+      - name: Create ZIP archive
+        run: zip -j /tmp/wav-files-toolkit.zip /tmp/wav-files-*
+      - name: Upload Release Asset
+        uses: softprops/action-gh-release@v2
+        with:
+          files: /tmp/wav-files-toolkit.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
