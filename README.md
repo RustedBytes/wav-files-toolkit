@@ -2,7 +2,7 @@
 
 - [x] All binaries in one archive to work with WAV files
 - [x] Rust-based, with test suits
-- [ ] Binaries are *statically-linked*
+- [x] Binaries are *statically-linked*
 
 Download the latest archive from [the Releases page](https://github.com/RustedBytes/wav-files-toolkit/releases).
 
