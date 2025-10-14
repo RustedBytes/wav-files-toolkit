@@ -9,7 +9,7 @@ All binaries in one archive to work with WAV files
 - [ ] wav-files-**spectrogram**: Generate visual spectrogram images from audio for WAV files
 - [ ] wav-files-**normalize**: Adjust audio to a target peak or integrated loudness (LUFS) of WAV files
 - [ ] wav-files-**format**: Standardize sample rate, bit depth, and channels of WAV files
-- [ ] wav-files-**validate**: Validate file integrity of WAV files in a folder
+- [x] wav-files-**validate**: Validate file integrity of WAV files in a folder
 - [x] wav-files-**concat**: Concatenate audio files into one file
 - [x] wav-files-**chunker**: Chunk WAV files into smaller pieces
 - [x] wav-files-**ss**: Speech Separation (using WebRTC VAD) for WAV files
