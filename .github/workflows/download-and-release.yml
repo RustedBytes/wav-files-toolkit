@@ -1,0 +1,13 @@
+name: Download & Release on Tag
+on:
+  push:
+    tags:
+      - '*'
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download wav-files-filter
+        run: wget -O "/tmp/wav-files-filter" "https://github.com/RustedBytes/wav-files-filter/releases/download/v0.1.0/wav-files-filter"
+      - name: Download wav-files-stats
+        run: wget -O "/tmp/wav-files-stats" "https://github.com/RustedBytes/wav-files-stats/releases/download/v0.1.0/wav-files-stats"
