@@ -2,6 +2,8 @@
 
 All binaries in one archive to work with WAV files
 
+- [ ] Binaries are *statically-linked*
+
 ## Tools
 
 - [ ] wav-files-**convert**: Convert between WAV and other formats (MP3, FLAC)
