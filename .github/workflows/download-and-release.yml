@@ -25,6 +25,8 @@ jobs:
         run: wget -O "/tmp/wav-files-normalize" "https://github.com/RustedBytes/wav-files-normalize/releases/download/v0.1.0/wav-files-normalize"
       - name: Download wav-files-format
         run: wget -O "/tmp/wav-files-format" "https://github.com/RustedBytes/wav-files-format/releases/download/v0.1.0/wav-files-format"
+      - name: Download wav-files-augment
+        run: wget -O "/tmp/wav-files-augment" "https://github.com/RustedBytes/wav-files-augment/releases/download/v0.1.0/wav-files-augment"
       - name: Make files executable
         run: chmod +x /tmp/wav-files-*
       - name: Strip files
