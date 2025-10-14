@@ -19,6 +19,8 @@ jobs:
         run: wget -O "/tmp/wav-files-chunker" "https://github.com/RustedBytes/wav-files-chunker/releases/download/v0.1.0/wav-files-chunker"
       - name: Make files executable
         run: chmod +x /tmp/wav-files-*
+      - name: Strip files
+        run: strip -s /tmp/wav-files-*
       - name: Create ZIP archive
         run: zip -j /tmp/wav-files-toolkit.zip /tmp/wav-files-*
       - name: Upload Release Asset
