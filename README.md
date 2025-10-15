@@ -21,6 +21,9 @@ Download the latest archive from [the Releases page](https://github.com/RustedBy
 - [x] [wav-files-**stats**](https://github.com/RustedBytes/wav-files-stats): Calculate statistics of a folder with WAV files
 - [x] [wav-files-**trim**](https://github.com/RustedBytes/wav-files-trim): Automatically detect and trim silence from the start/end of WAV files, with optional threshold settings
 - [x] [wav-files-**denoise**](https://github.com/RustedBytes/wav-files-denoise): Apply noise reduction tool [*nnnoiseless*](https://github.com/jneem/nnnoiseless) to remove background noise from WAV files
+- [ ] wav-files-**tempo**: Adjust playback speed/tempo of WAV files without altering pitch (using time-stretching algorithms like WSOLA)
+- [ ] wav-files-**mix**: Overlay or blend multiple WAV files into a single output, with volume balancing and channel mapping (e.g., stereo mixdown)
+- [ ] wav-files-**echo**: Add echo, reverb, or chorus effects to WAV files using delay-based DSP parameters (e.g., decay time, wet/dry mix)
 
 ### Demo
 
@@ -34,11 +37,8 @@ Download the latest archive from [the Releases page](https://github.com/RustedBy
   
 - [ ] wav-files-**eq**: Apply equalization filters to boost/cut specific frequency bands in WAV files. Why? Builds on spectrogram visualization for targeted audio shaping; useful for mastering or voice enhancement.
 - [ ] wav-files-**compress**: Apply dynamic range compression to even out loud/soft parts in WAV files, with adjustable ratio/threshold. Why? Pairs with normalization for professional loudness control; prevents clipping in mixed or concatenated files.
-- [ ] wav-files-**tempo**: Adjust playback speed/tempo of WAV files without altering pitch (using time-stretching algorithms like WSOLA). Why? Extends pitch-shifting augmentation to rhythm; great for music remixing or sped-up training data.
 - [ ] wav-files-**metadata**: Edit or extract embedded metadata (e.g., artist, title, comments) in WAV files using RIFF chunks. Why? Fills a gap in file handling; integrates with stats and validation for better organization in folders.
 - [ ] wav-files-**waveform**: Generate static waveform plot images (PNG/SVG) from WAV files, with customizable styles. Why? Expands visualization beyond spectrograms; quick for previews or reports alongside stats.
-- [ ] wav-files-**mix**: Overlay or blend multiple WAV files into a single output, with volume balancing and channel mapping (e.g., stereo mixdown). Why? Extends concatenation for layered audio (e.g., voiceover on music); useful for post-production without full DAWs.
-- [ ] wav-files-**echo**: Add echo, reverb, or chorus effects to WAV files using delay-based DSP parameters (e.g., decay time, wet/dry mix). Why? Enhances augmentation with spatial effects; great for simulating environments in voice recordings.
 - [ ] wav-files-**fft**: Compute and export Fast Fourier Transform (FFT) data as text/CSV for frequency analysis of WAV files. Why? Deeper dive beyond spectrograms for quantitative spectral insights; supports research or automated quality checks.
 
 </details>
