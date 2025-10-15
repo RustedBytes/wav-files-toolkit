@@ -42,3 +42,16 @@ Download the latest archive from [the Releases page](https://github.com/RustedBy
 ## Authors
 
 - Yehor Smoliakov (contact: <egorsmkv@gmail.com>)
+
+## Cite
+
+```
+@software{Smoliakov_Wav_Files_Toolkit_2025,
+  author = {Smoliakov, Yehor},
+  month = oct,
+  title = {{WAV Files Toolkit}},
+  url = {https://github.com/RustedBytes/wav-files-toolkit},
+  version = {0.1.0},
+  year = {2025}
+}
+```
