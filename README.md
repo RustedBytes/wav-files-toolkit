@@ -31,7 +31,7 @@ Download the latest archive from [the Releases page](https://github.com/RustedBy
 
   <summary>Open the list</summary>
   
-- [ ] wav-files-**denoise**: Apply noise reduction algorithms (e.g., spectral subtraction or Wiener filtering) to remove background noise from WAV files. Why? Complements augmentation (which adds noise) by enabling cleanup; essential for real-world recordings.
+- [ ] wav-files-**denoise**: Apply noise reduction tool [*nnnoiseless*](https://github.com/jneem/nnnoiseless) to remove background noise from WAV files. Why? Complements augmentation (which adds noise) by enabling cleanup; essential for real-world recordings.
 - [ ] wav-files-**eq**: Apply equalization filters to boost/cut specific frequency bands in WAV files. Why? Builds on spectrogram visualization for targeted audio shaping; useful for mastering or voice enhancement.
 - [ ] wav-files-**compress**: Apply dynamic range compression to even out loud/soft parts in WAV files, with adjustable ratio/threshold. Why? Pairs with normalization for professional loudness control; prevents clipping in mixed or concatenated files.
 - [ ] wav-files-**tempo**: Adjust playback speed/tempo of WAV files without altering pitch (using time-stretching algorithms like WSOLA). Why? Extends pitch-shifting augmentation to rhythm; great for music remixing or sped-up training data.
