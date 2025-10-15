@@ -24,11 +24,11 @@ Download the latest archive from [the Releases page](https://github.com/RustedBy
 
 - https://colab.research.google.com/drive/1iVqnDZLYi6Dz_pUda10WP4DeDrJwugMc?usp=sharing
 
-### TODO
+### Good next programs to implement
 
 <details>
 
-  <summary>Good next programs to implement</summary>
+  <summary>Open the list</summary>
   
 - [ ] wav-files-**denoise**: Apply noise reduction algorithms (e.g., spectral subtraction or Wiener filtering) to remove background noise from WAV files. Why? Complements augmentation (which adds noise) by enabling cleanup; essential for real-world recordings.
 - [ ] wav-files-**eq**: Apply equalization filters to boost/cut specific frequency bands in WAV files. Why? Builds on spectrogram visualization for targeted audio shaping; useful for mastering or voice enhancement.
