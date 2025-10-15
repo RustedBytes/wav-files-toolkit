@@ -9,12 +9,12 @@ jobs:
     steps:
       - name: Download static FFmpeg
         run: |
+          mkdir /tmp/3dparty-bins
           wget "https://johnvansickle.com/ffmpeg/builds/ffmpeg-git-amd64-static.tar.xz"
           wget "https://github.com/RustedBytes/nnnoiseless-releases/releases/download/v0.1.0/nnnoiseless"
           tar xf ffmpeg-git-amd64-static.tar.xz
           mv nnnoiseless /tmp/3dparty-bins
           mv ffmpeg-git-*-amd64-static/ /tmp/ffmpeg
-          mkdir /tmp/3dparty-bins
           mv /tmp/ffmpeg/ffmpeg /tmp/3dparty-bins/
           mv /tmp/ffmpeg/ffprobe /tmp/3dparty-bins/
           chmod +x /tmp/3dparty-bins/*
