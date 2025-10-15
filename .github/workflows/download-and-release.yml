@@ -7,6 +7,8 @@ jobs:
   build-and-release:
     runs-on: ubuntu-latest
     steps:
+      - name: Download wav-files-trim
+        run: wget -O "/tmp/wav-files-trim" "https://github.com/RustedBytes/wav-files-trim/releases/download/v0.1.0/wav-files-trim"
       - name: Download wav-files-filter
         run: wget -O "/tmp/wav-files-filter" "https://github.com/RustedBytes/wav-files-filter/releases/download/v0.1.1/wav-files-filter"
       - name: Download wav-files-stats
