@@ -6,6 +6,8 @@
 
 Download the latest archive from [the Releases page](https://github.com/RustedBytes/wav-files-toolkit/releases).
 
+- Demo: https://colab.research.google.com/drive/1iVqnDZLYi6Dz_pUda10WP4DeDrJwugMc?usp=sharing
+
 ## Tools
 
 - [x] [wav-files-**convert**](https://github.com/RustedBytes/wav-files-convert): Convert MP3, FLAC, OGG, M4A, AAC, WMA, AIFF, AU, MP2 to WAV
