@@ -20,6 +20,7 @@ Download the latest archive from [the Releases page](https://github.com/RustedBy
 - [x] [wav-files-**filter**](https://github.com/RustedBytes/wav-files-filter): Filter audios by their length
 - [x] [wav-files-**stats**](https://github.com/RustedBytes/wav-files-stats): Calculate statistics of a folder with WAV files
 - [x] [wav-files-**trim**](https://github.com/RustedBytes/wav-files-trim): Automatically detect and trim silence from the start/end of WAV files, with optional threshold settings
+- [x] [wav-files-**denoise**](https://github.com/RustedBytes/wav-files-denoise): Apply noise reduction tool [*nnnoiseless*](https://github.com/jneem/nnnoiseless) to remove background noise from WAV files
 
 ### Demo
 
@@ -31,7 +32,6 @@ Download the latest archive from [the Releases page](https://github.com/RustedBy
 
   <summary>Open the list</summary>
   
-- [ ] wav-files-**denoise**: Apply noise reduction tool [*nnnoiseless*](https://github.com/jneem/nnnoiseless) to remove background noise from WAV files. Why? Complements augmentation (which adds noise) by enabling cleanup; essential for real-world recordings.
 - [ ] wav-files-**eq**: Apply equalization filters to boost/cut specific frequency bands in WAV files. Why? Builds on spectrogram visualization for targeted audio shaping; useful for mastering or voice enhancement.
 - [ ] wav-files-**compress**: Apply dynamic range compression to even out loud/soft parts in WAV files, with adjustable ratio/threshold. Why? Pairs with normalization for professional loudness control; prevents clipping in mixed or concatenated files.
 - [ ] wav-files-**tempo**: Adjust playback speed/tempo of WAV files without altering pitch (using time-stretching algorithms like WSOLA). Why? Extends pitch-shifting augmentation to rhythm; great for music remixing or sped-up training data.
