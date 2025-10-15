@@ -55,7 +55,7 @@ Download the latest archive from [the Releases page](https://github.com/RustedBy
   month = oct,
   title = {{WAV Files Toolkit}},
   url = {https://github.com/RustedBytes/wav-files-toolkit},
-  version = {0.1.0},
+  version = {0.2.0},
   year = {2025}
 }
 ```
