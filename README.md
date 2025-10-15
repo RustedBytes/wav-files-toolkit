@@ -6,10 +6,6 @@
 
 Download the latest archive from [the Releases page](https://github.com/RustedBytes/wav-files-toolkit/releases).
 
-## Demo
-
-- https://colab.research.google.com/drive/1iVqnDZLYi6Dz_pUda10WP4DeDrJwugMc?usp=sharing
-
 ## Tools
 
 - [x] [wav-files-**convert**](https://github.com/RustedBytes/wav-files-convert): Convert MP3, FLAC, OGG, M4A, AAC, WMA, AIFF, AU, MP2 to WAV
@@ -23,6 +19,10 @@ Download the latest archive from [the Releases page](https://github.com/RustedBy
 - [x] [wav-files-**ss**](https://github.com/RustedBytes/wav-files-ss): Speech Separation (using WebRTC VAD) for WAV files
 - [x] [wav-files-**filter**](https://github.com/RustedBytes/wav-files-filter): Filter audios by their length
 - [x] [wav-files-**stats**](https://github.com/RustedBytes/wav-files-stats): Calculate statistics of a folder with WAV files
+
+### Demo
+
+- https://colab.research.google.com/drive/1iVqnDZLYi6Dz_pUda10WP4DeDrJwugMc?usp=sharing
 
 ### TODO
 
