@@ -54,9 +54,11 @@ jobs:
         run: chmod +x /tmp/wav-files-*
       - name: Strip files
         run: strip -s /tmp/wav-files-*
-      - name: Create ZIP archive
+      - name: Create ZIP archive - 1
+        run: zip -j /tmp/additional-tools.zip /tmp/audios-to-dataset /tmp/extract-audio
+      - name: Create ZIP archive - 2
         run: zip -j /tmp/wav-files-toolkit.zip /tmp/wav-files-*
-      - name: Create ZIP archive with additional binaries
+      - name: Create ZIP archive - 3
         run: zip -j /tmp/3d-party-bins.zip /tmp/3dparty-bins/*
       - name: Upload Release Asset
         uses: softprops/action-gh-release@v2
