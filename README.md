@@ -21,6 +21,7 @@ Download the latest archive from [the Releases page](https://github.com/RustedBy
 - [x] [wav-files-**stats**](https://github.com/RustedBytes/wav-files-stats): Calculate statistics of a folder with WAV files
 - [x] [wav-files-**trim**](https://github.com/RustedBytes/wav-files-trim): Automatically detect and trim silence from the start/end of WAV files, with optional threshold settings
 - [x] [wav-files-**denoise**](https://github.com/RustedBytes/wav-files-denoise): Apply noise reduction tool [*nnnoiseless*](https://github.com/jneem/nnnoiseless) to remove background noise from WAV files
+- [ ] [wav-files-**denoise-api**](https://github.com/RustedBytes/wav-files-denoise-api): Apply noise reduction API to remove background noise from WAV files
 - [ ] wav-files-**tempo**: Adjust playback speed/tempo of WAV files without altering pitch (using time-stretching algorithms like WSOLA)
 - [ ] wav-files-**mix**: Overlay or blend multiple WAV files into a single output, with volume balancing and channel mapping (e.g., stereo mixdown)
 - [ ] wav-files-**echo**: Add echo, reverb, or chorus effects to WAV files using delay-based DSP parameters (e.g., decay time, wet/dry mix)
