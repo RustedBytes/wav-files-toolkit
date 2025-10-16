@@ -65,6 +65,7 @@ jobs:
         with:
           files: |
             /tmp/3d-party-bins.zip
+            /tmp/additional-tools.zip
             /tmp/wav-files-toolkit.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
