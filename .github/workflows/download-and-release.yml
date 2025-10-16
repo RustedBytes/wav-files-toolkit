@@ -53,7 +53,10 @@ jobs:
       - name: Make files executable
         run: chmod +x /tmp/wav-files-*
       - name: Strip files
-        run: strip -s /tmp/wav-files-*
+        run: |
+          strip -s /tmp/wav-files-*
+          strip -s /tmp/audios-to-dataset
+          strip -s /tmp/extract-audio
       - name: Create ZIP archive - 1
         run: zip -j /tmp/additional-tools.zip /tmp/audios-to-dataset /tmp/extract-audio
       - name: Create ZIP archive - 2
