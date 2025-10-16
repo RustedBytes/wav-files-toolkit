@@ -51,7 +51,10 @@ jobs:
       - name: Download wav-files-denoise-api
         run: wget -O "/tmp/wav-files-denoise-api" "https://github.com/RustedBytes/wav-files-denoise-api/releases/download/v0.2.0/wav-files-denoise-api"
       - name: Make files executable
-        run: chmod +x /tmp/wav-files-*
+        run: |
+          chmod +x /tmp/wav-files-*
+          chmod +x /tmp/audios-to-dataset
+          chmod +x /tmp/extract-audio
       - name: Strip files
         run: |
           strip -s /tmp/wav-files-*
