@@ -24,7 +24,7 @@ Download the latest archive from [the Releases page](https://github.com/RustedBy
 - [ ] [wav-files-**vad-api**](https://github.com/RustedBytes/wav-files-vad-api): Extract speech using an API that performs Voice Speech Detection for WAV files
 - [ ] [wav-files-**tempo**](https://github.com/RustedBytes/wav-files-tempo): Adjust playback speed/tempo of WAV files without altering pitch (using time-stretching algorithms like WSOLA)
 - [ ] [wav-files-**mix**](https://github.com/RustedBytes/wav-files-mix): Overlay or blend multiple WAV files into a single output, with volume balancing and channel mapping (e.g., stereo mixdown)
-- [ ] [wav-files-**echo**](https://github.com/RustedBytes/wav-files-echo): Add echo, reverb, or chorus effects to WAV files using delay-based DSP parameters (e.g., decay time, wet/dry mix)
+- [x] [wav-files-**echo**](https://github.com/RustedBytes/wav-files-echo): Add echo, reverb, or chorus effects to WAV files using delay-based DSP parameters (e.g., decay time, wet/dry mix)
 
 ### Demo
 
