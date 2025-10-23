@@ -10,6 +10,8 @@ jobs:
       - name: Download static FFmpeg
         run: |
           mkdir /tmp/3dparty-bins
+          wget "https://github.com/RustedBytes/data-viewer-audio/releases/download/v0.2.2/data-viewer-audio"
+          mv data-viewer-audio /tmp/3dparty-bins/data-viewer-audio
           wget "https://github.com/RustedBytes/audio-parquet-merger/releases/download/v0.1.0/audio-parquet-merger"
           mv audio-parquet-merger /tmp/3dparty-bins/audio-parquet-merger
           wget "https://github.com/hangxie/parquet-tools/releases/download/v1.37.1/parquet-tools-v1.37.1-linux-amd64.gz"
