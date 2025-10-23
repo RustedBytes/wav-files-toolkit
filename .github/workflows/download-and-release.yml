@@ -10,6 +10,9 @@ jobs:
       - name: Download static FFmpeg
         run: |
           mkdir /tmp/3dparty-bins
+          wget "https://github.com/hangxie/parquet-tools/releases/download/v1.37.1/parquet-tools-v1.37.1-linux-amd64.gz"
+          gzip -d parquet-tools-v1.37.1-linux-amd64.gz
+          mv parquet-tools-v1.37.1-linux-amd64 /tmp/3dparty-bins/parquet-tools
           wget "https://johnvansickle.com/ffmpeg/builds/ffmpeg-git-amd64-static.tar.xz"
           wget "https://github.com/RustedBytes/nnnoiseless-releases/releases/download/v0.1.0/nnnoiseless"
           tar xf ffmpeg-git-amd64-static.tar.xz
