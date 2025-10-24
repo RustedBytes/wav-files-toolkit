@@ -53,12 +53,12 @@ Download the latest archive from [the Releases page](https://github.com/RustedBy
 ## Cite
 
 ```
-@software{Smoliakov_Wav_Files_Toolkit_2025,
+@software{Smoliakov_Wav_Files_Toolkit,
   author = {Smoliakov, Yehor},
   month = oct,
-  title = {{WAV Files Toolkit}},
+  title = {{WAV Files Toolkit: A suite of command-line tools for common WAV audio processing tasks, including conversion from other formats, data augmentation, loudness normalization, spectrogram generation, and validation.}},
   url = {https://github.com/RustedBytes/wav-files-toolkit},
-  version = {0.2.0},
+  version = {0.4.0},
   year = {2025}
 }
 ```
