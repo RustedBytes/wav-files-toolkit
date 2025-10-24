@@ -1,5 +1,7 @@
 # wav-files-toolkit
 
+[![build](https://github.com/RustedBytes/wav-files-toolkit/actions/workflows/download-and-release.yml/badge.svg)](https://github.com/RustedBytes/wav-files-toolkit/actions/workflows/download-and-release.yml)
+
 - [x] Rust-based, with test suits
 - [x] Binaries are *statically-linked*
 
