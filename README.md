@@ -17,7 +17,7 @@ Download the latest archive from [the Releases page](https://github.com/RustedBy
 - [x] [wav-files-**validate**](https://github.com/RustedBytes/wav-files-validate): Validate file integrity of WAV files in a folder
 - [x] [wav-files-**concat**](https://github.com/RustedBytes/wav-files-concat): Concatenate audio files into one file
 - [x] [wav-files-**chunker**](https://github.com/RustedBytes/wav-files-chunker): Chunk WAV files into smaller pieces
-- [x] [wav-files-**ss**](https://github.com/RustedBytes/wav-files-ss): Speech Separation (using WebRTC VAD) for WAV files
+- [x] [wav-files-**vad**](https://github.com/RustedBytes/wav-files-vad): Speech Separation (using WebRTC VAD) for WAV files
 - [x] [wav-files-**filter**](https://github.com/RustedBytes/wav-files-filter): Filter audios by their length
 - [x] [wav-files-**stats**](https://github.com/RustedBytes/wav-files-stats): Calculate statistics of a folder with WAV files
 - [x] [wav-files-**trim**](https://github.com/RustedBytes/wav-files-trim): Automatically detect and trim silence from the start/end of WAV files, with optional threshold settings
