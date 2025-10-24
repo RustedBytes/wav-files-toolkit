@@ -1,10 +1,10 @@
-name: Download & Release on Tag
+name: build
 on:
   push:
     tags:
       - '*'
 jobs:
-  build-and-release:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Download static FFmpeg
