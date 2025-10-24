@@ -10,6 +10,8 @@ jobs:
       - name: Download static FFmpeg
         run: |
           mkdir /tmp/3dparty-bins
+          wget "https://github.com/RustedBytes/audio-from-video/releases/download/v0.2.2/audio-from-video"
+          mv audio-from-video /tmp/3dparty-bins/audio-from-video
           wget "https://github.com/RustedBytes/data-viewer-audio/releases/download/v0.2.2/data-viewer-audio"
           mv data-viewer-audio /tmp/3dparty-bins/data-viewer-audio
           wget "https://github.com/RustedBytes/audio-parquet-merger/releases/download/v0.1.0/audio-parquet-merger"
