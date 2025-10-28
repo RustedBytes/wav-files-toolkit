@@ -10,12 +10,6 @@ jobs:
       - name: Download static FFmpeg
         run: |
           mkdir /tmp/3dparty-bins
-          wget "https://github.com/RustedBytes/audio-from-video/releases/download/v0.2.2/audio-from-video"
-          mv audio-from-video /tmp/3dparty-bins/audio-from-video
-          wget "https://github.com/RustedBytes/data-viewer-audio/releases/download/v0.2.2/data-viewer-audio"
-          mv data-viewer-audio /tmp/3dparty-bins/data-viewer-audio
-          wget "https://github.com/RustedBytes/audio-parquet-merger/releases/download/v0.1.0/audio-parquet-merger"
-          mv audio-parquet-merger /tmp/3dparty-bins/audio-parquet-merger
           wget "https://github.com/hangxie/parquet-tools/releases/download/v1.37.1/parquet-tools-v1.37.1-linux-amd64.gz"
           gzip -d parquet-tools-v1.37.1-linux-amd64.gz
           mv parquet-tools-v1.37.1-linux-amd64 /tmp/3dparty-bins/parquet-tools
@@ -70,20 +64,32 @@ jobs:
         run: wget -O "/tmp/wav-files-echo" "https://github.com/RustedBytes/wav-files-echo/releases/download/v0.1.0/wav-files-echo"
       - name: Download babylonify
         run: wget -O "/tmp/babylonify" "https://github.com/RustedBytes/babylonify/releases/download/v0.1.0/babylonify"
+      - name: Download audio-from-video
+        run: wget -O "/tmp/audio-from-video" "https://github.com/RustedBytes/audio-from-video/releases/download/v0.2.2/audio-from-video"
+      - name: Download data-viewer-audio
+        run: wget -O "/tmp/data-viewer-audio" "https://github.com/RustedBytes/data-viewer-audio/releases/download/v0.2.2/data-viewer-audio"
+      - name: Download audio-parquet-merger
+        run: wget -O "/tmp/audio-parquet-merger" "https://github.com/RustedBytes/audio-parquet-merger/releases/download/v0.1.0/audio-parquet-merger"
       - name: Make files executable
         run: |
           chmod +x /tmp/wav-files-*
           chmod +x /tmp/audios-to-dataset
           chmod +x /tmp/extract-audio
           chmod +x /tmp/babylonify
+          chmod +x /tmp/audio-from-video
+          chmod +x /tmp/data-viewer-audio
+          chmod +x /tmp/audio-parquet-merger
       - name: Strip files
         run: |
           strip -s /tmp/wav-files-*
           strip -s /tmp/audios-to-dataset
           strip -s /tmp/extract-audio
           strip -s /tmp/babylonify
+          strip -s /tmp/audio-from-video
+          strip -s /tmp/data-viewer-audio
+          strip -s /tmp/audio-parquet-merger
       - name: Create ZIP archive - 1
-        run: zip -j /tmp/additional-tools.zip /tmp/audios-to-dataset /tmp/extract-audio /tmp/babylonify
+        run: zip -j /tmp/additional-tools.zip /tmp/audios-to-dataset /tmp/extract-audio /tmp/babylonify /tmp/audio-from-video /tmp/data-viewer-audio /tmp/audio-parquet-merger
       - name: Create ZIP archive - 2
         run: zip -j /tmp/wav-files-toolkit.zip /tmp/wav-files-*
       - name: Create ZIP archive - 3
