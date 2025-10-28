@@ -152,7 +152,7 @@ def get_latest_release_from_html(repo_url: str, max_retries: int = 2) -> Optiona
                     continue
                 else:
                     return {'error': f'HTTP error {e.code}'}
-            except (urllib.error.URLError, socket.timeout) as e:
+            except (urllib.error.URLError, socket.timeout, TimeoutError) as e:
                 if attempt < max_retries:
                     time.sleep(RETRY_DELAY)
                     continue
