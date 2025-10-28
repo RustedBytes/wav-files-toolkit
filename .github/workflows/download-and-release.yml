@@ -28,7 +28,7 @@ jobs:
           mv /tmp/ffmpeg/ffprobe /tmp/3dparty-bins/
           strip -s /tmp/3dparty-bins/*
           chmod +x /tmp/3dparty-bins/*
-      - name: Download wav-files-denoise-api
+      - name: Download wav-files-trim
         run: wget -O "/tmp/wav-files-trim" "https://github.com/RustedBytes/wav-files-trim/releases/download/v0.1.0/wav-files-trim"
       - name: Download audios-to-dataset
         run: wget -O "/tmp/audios-to-dataset" "https://github.com/RustedBytes/audios-to-dataset/releases/download/v0.2.4/audios-to-dataset"

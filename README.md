@@ -2,7 +2,7 @@
 
 [![build](https://github.com/RustedBytes/wav-files-toolkit/actions/workflows/download-and-release.yml/badge.svg)](https://github.com/RustedBytes/wav-files-toolkit/actions/workflows/download-and-release.yml)
 
-- [x] Rust-based, with test suits
+- [x] Rust-based, with test suites
 - [x] Binaries are *statically-linked*
 
 Download the latest archive from [the Releases page](https://github.com/RustedBytes/wav-files-toolkit/releases).
