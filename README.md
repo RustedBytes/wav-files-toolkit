@@ -27,6 +27,10 @@ Download the latest archive from [the Releases page](https://github.com/RustedBy
 - [x] [wav-files-**tempo**](https://github.com/RustedBytes/wav-files-tempo): Adjust playback speed/tempo of WAV files without altering pitch (using time-stretching algorithms like WSOLA)
 - [x] [wav-files-**echo**](https://github.com/RustedBytes/wav-files-echo): Add echo, reverb, or chorus effects to WAV files using delay-based DSP parameters (e.g., decay time, wet/dry mix)
 
+## Additional Tools
+
+- [x] [**babylonify**](https://github.com/RustedBytes/babylonify): Filter parquet files by language
+
 ### Demo
 
 - https://colab.research.google.com/drive/1iVqnDZLYi6Dz_pUda10WP4DeDrJwugMc?usp=sharing
