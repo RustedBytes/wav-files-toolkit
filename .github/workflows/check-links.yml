@@ -1,0 +1,68 @@
+name: Check Links
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+    paths:
+      - '**/*.md'
+      - '.github/workflows/check-links.yml'
+  pull_request:
+    branches:
+      - main
+      - dev
+    paths:
+      - '**/*.md'
+      - '.github/workflows/check-links.yml'
+  schedule:
+    # Run weekly on Monday at 00:00 UTC
+    - cron: '0 0 * * 1'
+  workflow_dispatch:
+
+jobs:
+  lychee:
+    name: Check Links in Markdown Files
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: read
+      issues: write
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+
+      - name: Check links with lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --verbose --no-progress '**/*.md'
+          fail: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create issue if link check failed
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const title = '🔗 Broken links detected in markdown files';
+            const body = `Link checker detected broken links in markdown files.\n\nPlease review the [workflow run](${context.payload.repository.html_url}/actions/runs/${context.runId}) for details.`;
+            
+            // Check if issue already exists
+            const issues = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: ['broken-links']
+            });
+            
+            if (issues.data.length === 0) {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: title,
+                body: body,
+                labels: ['broken-links', 'documentation']
+              });
+            }
