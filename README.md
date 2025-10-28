@@ -29,6 +29,8 @@ Download the latest archive from [the Releases page](https://github.com/RustedBy
 
 ## Additional Tools
 
+- [x] [**audios-to-dataset**](https://github.com/RustedBytes/audios-to-dataset): Turn audio folders into chunked DuckDB or Parquet datasets for Hugging Face
+- [x] [**extract-audio**](https://github.com/RustedBytes/extract-audio): Extract audio from Hugging Face Parquet/Arrow dataset files
 - [x] [**babylonify**](https://github.com/RustedBytes/babylonify): Filter parquet files by language
 
 ### Demo
