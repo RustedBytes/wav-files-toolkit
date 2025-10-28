@@ -23,7 +23,7 @@ jobs:
         uses: lycheeverse/lychee-action@v2
         with:
           # Check all markdown files in the repository
-          args: --verbose --no-progress --accept=200,204,429 '**/*.md'
+          args: --verbose --no-progress --max-retries 3 '**/*.md'
           # Fail action on broken links
           fail: true
         env:
