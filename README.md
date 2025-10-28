@@ -29,7 +29,23 @@ Download the latest archive from [the Releases page](https://github.com/RustedBy
 
 ## Additional Tools
 
+The following tools are available in the `additional-tools.zip` release archive:
+
+- [x] [**audios-to-dataset**](https://github.com/RustedBytes/audios-to-dataset): Convert audio files to dataset format
+- [x] [**extract-audio**](https://github.com/RustedBytes/extract-audio): Extract audio from various sources
 - [x] [**babylonify**](https://github.com/RustedBytes/babylonify): Filter parquet files by language
+
+## 3rd-party Tools
+
+The following external tools are bundled with the toolkit and available in the `3d-party-bins.zip` release archive:
+
+- [x] [**FFmpeg**](https://ffmpeg.org/): A complete, cross-platform solution to record, convert and stream audio and video (static build from [johnvansickle.com](https://johnvansickle.com/ffmpeg/))
+- [x] [**ffprobe**](https://ffmpeg.org/ffprobe.html): Multimedia stream analyzer, included with FFmpeg
+- [x] [**parquet-tools**](https://github.com/hangxie/parquet-tools): Command-line tools for Apache Parquet files
+- [x] [**nnnoiseless**](https://github.com/RustedBytes/nnnoiseless-releases): RNNoise-based noise suppression tool
+- [x] [**audio-from-video**](https://github.com/RustedBytes/audio-from-video): Extract audio tracks from video files
+- [x] [**data-viewer-audio**](https://github.com/RustedBytes/data-viewer-audio): View and inspect audio dataset information
+- [x] [**audio-parquet-merger**](https://github.com/RustedBytes/audio-parquet-merger): Merge multiple audio parquet files
 
 ### Demo
 
