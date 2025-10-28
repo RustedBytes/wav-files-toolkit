@@ -29,6 +29,10 @@ Download the latest archive from [the Releases page](https://github.com/RustedBy
 
 ## Additional Tools
 
+The following tools are available in the `additional-tools.zip` release archive:
+
+- [x] [**audios-to-dataset**](https://github.com/RustedBytes/audios-to-dataset): Convert audio files to dataset format
+- [x] [**extract-audio**](https://github.com/RustedBytes/extract-audio): Extract audio from various sources
 - [x] [**babylonify**](https://github.com/RustedBytes/babylonify): Filter parquet files by language
 
 ## 3rd-party Tools
@@ -42,7 +46,6 @@ The following external tools are bundled with the toolkit and available in the `
 - [x] [**audio-from-video**](https://github.com/RustedBytes/audio-from-video): Extract audio tracks from video files
 - [x] [**data-viewer-audio**](https://github.com/RustedBytes/data-viewer-audio): View and inspect audio dataset information
 - [x] [**audio-parquet-merger**](https://github.com/RustedBytes/audio-parquet-merger): Merge multiple audio parquet files
-- [x] [**extract-audio**](https://github.com/RustedBytes/extract-audio): Extract audio from various sources
 
 ### Demo
 
