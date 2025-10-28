@@ -37,7 +37,7 @@ The following tools are available in the `additional-tools.zip` release archive:
 
 ## 3rd-party Tools
 
-The following external tools are bundled with the toolkit and available in the `3d-party-bins.zip` release archive:
+The following external tools are bundled with the toolkit and available in the `3rd-party-bins.zip` release archive:
 
 - [x] [**FFmpeg**](https://ffmpeg.org/): A complete, cross-platform solution to record, convert and stream audio and video (static build from [johnvansickle.com](https://johnvansickle.com/ffmpeg/))
 - [x] [**ffprobe**](https://ffmpeg.org/ffprobe.html): Multimedia stream analyzer, included with FFmpeg

@@ -87,12 +87,12 @@ jobs:
       - name: Create ZIP archive - 2
         run: zip -j /tmp/wav-files-toolkit.zip /tmp/wav-files-*
       - name: Create ZIP archive - 3
-        run: zip -j /tmp/3d-party-bins.zip /tmp/3dparty-bins/*
+        run: zip -j /tmp/3rd-party-bins.zip /tmp/3dparty-bins/*
       - name: Upload Release Asset
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            /tmp/3d-party-bins.zip
+            /tmp/3rd-party-bins.zip
             /tmp/additional-tools.zip
             /tmp/wav-files-toolkit.zip
         env:
