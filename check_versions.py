@@ -10,8 +10,8 @@ import sys
 import urllib.request
 import json
 from typing import List, Tuple, Optional
-import subprocess
 import argparse
+import time
 
 
 def extract_github_repos_from_readme(readme_path: str) -> List[Tuple[str, str]]:
@@ -77,10 +77,6 @@ def extract_github_repos_from_workflow(workflow_path: str) -> List[Tuple[str, st
         
         seen = set()
         for owner, repo in matches:
-            # Skip johnvansickle.com links (ffmpeg)
-            if owner == 'johnvansickle.com':
-                continue
-                
             url = f"https://github.com/{owner}/{repo}"
             
             # Remove any version tags or file extensions
@@ -97,12 +93,13 @@ def extract_github_repos_from_workflow(workflow_path: str) -> List[Tuple[str, st
     return repos
 
 
-def get_latest_release_from_html(repo_url: str) -> Optional[dict]:
+def get_latest_release_from_html(repo_url: str, max_retries: int = 2) -> Optional[dict]:
     """
     Scrape the latest release information from GitHub repository's releases page.
     
     Args:
         repo_url: GitHub repository URL (e.g., https://github.com/owner/repo)
+        max_retries: Maximum number of retry attempts for failed requests
         
     Returns:
         Dictionary with release information or None if not found
@@ -116,38 +113,48 @@ def get_latest_release_from_html(repo_url: str) -> Optional[dict]:
         owner = parts[-2]
         repo = parts[-1]
         
-        # Try to fetch the releases page
+        # Try to fetch the releases page with retries
         releases_url = f"https://github.com/{owner}/{repo}/releases/latest"
         
-        req = urllib.request.Request(releases_url)
-        req.add_header('User-Agent', 'Mozilla/5.0 (compatible; version-checker)')
-        
-        try:
-            with urllib.request.urlopen(req, timeout=10) as response:
-                html = response.read().decode('utf-8')
-                final_url = response.geturl()
+        for attempt in range(max_retries + 1):
+            try:
+                req = urllib.request.Request(releases_url)
+                req.add_header('User-Agent', 'Mozilla/5.0 (compatible; version-checker)')
                 
-            # Extract version from the final URL after redirect
-            # Format: https://github.com/owner/repo/releases/tag/v1.0.0
-            version_match = re.search(r'/releases/tag/([^"\']+)', final_url)
-            if version_match:
-                version = version_match.group(1)
-                
-                # Try to extract the publish date from HTML
-                date_match = re.search(r'datetime="([^"]+)"', html)
-                published = date_match.group(1).split('T')[0] if date_match else 'N/A'
-                
-                return {
-                    'tag_name': version,
-                    'published_at': published,
-                    'html_url': final_url
-                }
-        except urllib.error.HTTPError as e:
-            if e.code == 404:
-                return {'error': 'No releases found'}
-            else:
-                return {'error': f'HTTP error {e.code}'}
-                
+                with urllib.request.urlopen(req, timeout=10) as response:
+                    html = response.read().decode('utf-8')
+                    final_url = response.geturl()
+                    
+                # Extract version from the final URL after redirect
+                # Format: https://github.com/owner/repo/releases/tag/v1.0.0
+                version_match = re.search(r'/releases/tag/([^"\']+)', final_url)
+                if version_match:
+                    version = version_match.group(1)
+                    
+                    # Try to extract the publish date from HTML
+                    date_match = re.search(r'datetime="([^"]+)"', html)
+                    published = date_match.group(1).split('T')[0] if date_match else 'N/A'
+                    
+                    return {
+                        'tag_name': version,
+                        'published_at': published,
+                        'html_url': final_url
+                    }
+            except urllib.error.HTTPError as e:
+                if e.code == 404:
+                    return {'error': 'No releases found'}
+                elif attempt < max_retries:
+                    time.sleep(1)  # Brief pause before retry
+                    continue
+                else:
+                    return {'error': f'HTTP error {e.code}'}
+            except (urllib.error.URLError, TimeoutError) as e:
+                if attempt < max_retries:
+                    time.sleep(1)  # Brief pause before retry
+                    continue
+                else:
+                    return {'error': 'Network error'}
+                    
     except Exception as e:
         return {'error': str(e)}
     
