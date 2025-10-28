@@ -68,18 +68,22 @@ jobs:
         run: wget -O "/tmp/wav-files-tempo" "https://github.com/RustedBytes/wav-files-tempo/releases/download/v0.1.0/wav-files-tempo"
       - name: Download wav-files-echo
         run: wget -O "/tmp/wav-files-echo" "https://github.com/RustedBytes/wav-files-echo/releases/download/v0.1.0/wav-files-echo"
+      - name: Download babylonify
+        run: wget -O "/tmp/babylonify" "https://github.com/RustedBytes/babylonify/releases/download/v0.1.0/babylonify"
       - name: Make files executable
         run: |
           chmod +x /tmp/wav-files-*
           chmod +x /tmp/audios-to-dataset
           chmod +x /tmp/extract-audio
+          chmod +x /tmp/babylonify
       - name: Strip files
         run: |
           strip -s /tmp/wav-files-*
           strip -s /tmp/audios-to-dataset
           strip -s /tmp/extract-audio
+          strip -s /tmp/babylonify
       - name: Create ZIP archive - 1
-        run: zip -j /tmp/additional-tools.zip /tmp/audios-to-dataset /tmp/extract-audio
+        run: zip -j /tmp/additional-tools.zip /tmp/audios-to-dataset /tmp/extract-audio /tmp/babylonify
       - name: Create ZIP archive - 2
         run: zip -j /tmp/wav-files-toolkit.zip /tmp/wav-files-*
       - name: Create ZIP archive - 3
