@@ -11,7 +11,12 @@ import urllib.request
 import json
 from typing import List, Tuple, Optional
 import argparse
+import socket
 import time
+
+
+# Configuration constants
+RETRY_DELAY = 1  # Delay in seconds between retry attempts
 
 
 def extract_github_repos_from_readme(readme_path: str) -> List[Tuple[str, str]]:
@@ -115,12 +120,11 @@ def get_latest_release_from_html(repo_url: str, max_retries: int = 2) -> Optiona
         
         # Try to fetch the releases page with retries
         releases_url = f"https://github.com/{owner}/{repo}/releases/latest"
+        req = urllib.request.Request(releases_url)
+        req.add_header('User-Agent', 'Mozilla/5.0 (compatible; version-checker)')
         
         for attempt in range(max_retries + 1):
             try:
-                req = urllib.request.Request(releases_url)
-                req.add_header('User-Agent', 'Mozilla/5.0 (compatible; version-checker)')
-                
                 with urllib.request.urlopen(req, timeout=10) as response:
                     html = response.read().decode('utf-8')
                     final_url = response.geturl()
@@ -144,13 +148,13 @@ def get_latest_release_from_html(repo_url: str, max_retries: int = 2) -> Optiona
                 if e.code == 404:
                     return {'error': 'No releases found'}
                 elif attempt < max_retries:
-                    time.sleep(1)  # Brief pause before retry
+                    time.sleep(RETRY_DELAY)
                     continue
                 else:
                     return {'error': f'HTTP error {e.code}'}
-            except (urllib.error.URLError, TimeoutError) as e:
+            except (urllib.error.URLError, socket.timeout) as e:
                 if attempt < max_retries:
-                    time.sleep(1)  # Brief pause before retry
+                    time.sleep(RETRY_DELAY)
                     continue
                 else:
                     return {'error': 'Network error'}
