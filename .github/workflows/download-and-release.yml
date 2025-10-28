@@ -35,9 +35,9 @@ jobs:
       - name: Download extract-audio
         run: wget -O "/tmp/extract-audio" "https://github.com/RustedBytes/extract-audio/releases/download/v0.2.6/extract-audio"
       - name: Download wav-files-filter
-        run: wget -O "/tmp/wav-files-filter" "https://github.com/RustedBytes/wav-files-filter/releases/download/v0.1.1/wav-files-filter"
+        run: wget -O "/tmp/wav-files-filter" "https://github.com/RustedBytes/wav-files-filter/releases/download/v0.2.0/wav-files-filter"
       - name: Download wav-files-stats
-        run: wget -O "/tmp/wav-files-stats" "https://github.com/RustedBytes/wav-files-stats/releases/download/v0.1.1/wav-files-stats"
+        run: wget -O "/tmp/wav-files-stats" "https://github.com/RustedBytes/wav-files-stats/releases/download/v0.2.1/wav-files-stats"
       - name: Download wav-files-ss
         run: wget -O "/tmp/wav-files-ss" "https://github.com/RustedBytes/wav-files-ss/releases/download/v0.1.1/wav-files-ss"
       - name: Download wav-files-concat
@@ -60,6 +60,14 @@ jobs:
         run: wget -O "/tmp/wav-files-denoise" "https://github.com/RustedBytes/wav-files-denoise/releases/download/v0.1.0/wav-files-denoise"
       - name: Download wav-files-denoise-api
         run: wget -O "/tmp/wav-files-denoise-api" "https://github.com/RustedBytes/wav-files-denoise-api/releases/download/v0.2.0/wav-files-denoise-api"
+      - name: Download wav-files-vad
+        run: wget -O "/tmp/wav-files-vad" "https://github.com/RustedBytes/wav-files-vad/releases/download/v0.2/wav-files-vad"
+      - name: Download wav-files-vad-api
+        run: wget -O "/tmp/wav-files-vad-api" "https://github.com/RustedBytes/wav-files-vad-api/releases/download/v0.1.1/wav-files-vad-api"
+      - name: Download wav-files-tempo
+        run: wget -O "/tmp/wav-files-tempo" "https://github.com/RustedBytes/wav-files-tempo/releases/download/v0.1.0/wav-files-tempo"
+      - name: Download wav-files-echo
+        run: wget -O "/tmp/wav-files-echo" "https://github.com/RustedBytes/wav-files-echo/releases/download/v0.1.0/wav-files-echo"
       - name: Make files executable
         run: |
           chmod +x /tmp/wav-files-*
